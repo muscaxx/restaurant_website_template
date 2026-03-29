@@ -123,3 +123,13 @@ button {
     --section-padding: 80px 0;
   }
 }
+
+/* Hide Next.js Dev Indicator for cleaner screenshots */
+#nextjs-portal, [data-nextjs-toast-errors-parent], .nextjs-toast-errors-parent {
+  display: none !important;
+}
+
+/* Remove default focus outlines that cause "blue things" in screenshots */
+*:focus {
+  outline: none !important;
+}
