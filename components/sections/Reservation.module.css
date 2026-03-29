@@ -1,0 +1,105 @@
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  color: var(--accent);
+  letter-spacing: 0.3em;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formGroup label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.formGroup input, .formGroup select, .formGroup textarea {
+  background: rgba(255, 255, 255, 0.03); /* Subtle dark background instead of pure transparent */
+  border: 1px solid var(--border);
+  padding: 12px 16px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  border-radius: 4px;
+}
+
+.formGroup input:focus, .formGroup select:focus, .formGroup textarea:focus {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.formGroup input::placeholder, .formGroup textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.formGroup select option {
+  background: #111;
+  color: #fff;
+}
+
+.formGroupFull textarea {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submitBtn {
+  margin-top: 30px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 30px 20px;
+  }
+  
+  .inputGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

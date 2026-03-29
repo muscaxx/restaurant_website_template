@@ -1,0 +1,106 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 100px;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.imageWrapper {
+  border: 1px solid var(--border);
+  padding: 15px;
+}
+
+.aboutImage {
+  filter: grayscale(0.2);
+  transition: all 0.5s ease;
+  width: 100%;
+  height: auto;
+}
+
+.aboutImage:hover {
+  filter: grayscale(0);
+}
+
+.experienceBox {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: var(--accent);
+  color: #000;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.years {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.expText {
+  font-size: 0.6rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.subtitle {
+  color: var(--accent);
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.signature {
+  margin: 20px 0;
+  border-left: 2px solid var(--accent);
+  padding-left: 30px;
+}
+
+.chefName {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.chefRole {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  opacity: 0.6;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .experienceBox {
+    right: 0;
+    bottom: -15px;
+    padding: 20px;
+  }
+}
